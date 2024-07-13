@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Banner from "../components/Banner";
 import Form from "../components/Form";
 import MultiCardCarousel from "../components/Multicard";
 import Footer from "../components/Footer";
 import FormCategory from "../components/FormCategory";
+import { GlobalContext } from "../GlobalContext/GlobalContext";
 
-const Home = (props) => {
+const Home = () => {
     const [videos, setVideo] = useState([{
     id: 1,
     title: "Tutorial de JavaScript",
@@ -93,14 +94,12 @@ const Home = (props) => {
     category: "Frameworks JavaScript"
   }]
 );
-    const { stateModal, handleOpen,stateModalCategory,handleOpenCategory,setOpenModal } = props;
-    const [categories,setCategory]=useState(["Programación", "Tecnología", "Noticias tech"]);
-    console.log(videos)
+    const { categories,stateModal,stateModalCategory} = useContext(GlobalContext);
+    
+    
    
     const deleteVideo = (id) => {
-        console.log(videos)
         const newVideos = videos.filter(video => video.id !== id);
-        console.log(newVideos)
         setVideo(newVideos);
     };
     
@@ -110,12 +109,14 @@ const Home = (props) => {
     return (
         <>
             <main className="w-full bg-codingImg  text-center">
-                {stateModal && <Form isOpen={stateModal} handleOpen={handleOpen} categories={categories} setVideo={setVideo} videos={videos} setOpenModal={setOpenModal} />}
-                {stateModalCategory && <FormCategory isOpen={stateModalCategory} handleOpen={handleOpenCategory} actualCategories={categories} setCategory={setCategory}/>}
+                {stateModal && <Form videos={videos} setVideo={setVideo}/>}
+                {stateModalCategory && <FormCategory/>}
                 <Banner videos={videos} />
                 {categories.map((category, index) => (
                     <MultiCardCarousel key={`cat-${category}-${index}`} category={category} videos={videos} deleteVideo={deleteVideo} />
-                ))}
+                    )
+                  )
+                }
             </main>
             <Footer />
         </>

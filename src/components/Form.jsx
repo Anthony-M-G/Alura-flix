@@ -1,15 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { GlobalContext } from '../GlobalContext/GlobalContext';
 
 
-const Form = ( props ) => {
+const Form = ( {videos,setVideo} ) => {
   const [title, setTitle] = useState('');
   const [url, setUrl] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
 
-  const {isOpen, handleOpen,categories,videos,setVideo,setOpenModal} = props;
+  const {stateModal, toggleModal,categories,setOpenModal} = useContext(GlobalContext);
   
     
     const handleSubmit = (e) => {
@@ -17,10 +18,10 @@ const Form = ( props ) => {
     const id=videos.length+1
     // Aquí puedes manejar el envío del formulario
     setVideo([...videos,{id: id,title,url,description,category}])
-    handleOpen(isOpen,setOpenModal);
+    toggleModal(stateModal,setOpenModal);
   };
 
-  if (!isOpen) return null;
+  if (!stateModal) return null;
 
   return (
     <section aria-labelledby="add-video-title" className="fixed z-10 inset-0 overflow-y-auto ">
@@ -53,7 +54,7 @@ const Form = ( props ) => {
           </select>
         </div>
         <div className="flex items-center justify-between">
-          <button type="button" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={() => handleOpen(isOpen,setOpenModal)}>
+          <button type="button" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={() => toggleModal(stateModal,setOpenModal)}>
             Cancelar
           </button>
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">

@@ -20,7 +20,7 @@ const VideoCard=({title,url,deleteVideo,id})=>{
        
         <div className="justify-evenly flex">
           {/*<img src="/public/edit.png" alt="" className="w-[30px] h-[30px]" />*/}
-           <img src="/public/imgs/delete.png" alt="" className="w-[20px] h-[20px]" onClick={()=>deleteVideo(id)}/>
+           <img src="/public/delete.png" alt="" className="w-[20px] h-[20px]" onClick={()=>deleteVideo(id)}/>
         </div>
        </div>
     </article>

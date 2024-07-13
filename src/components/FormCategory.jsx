@@ -1,19 +1,23 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { GlobalContext } from "../GlobalContext/GlobalContext";
 
 
-const FormCategory=({actualCategories,isOpen,handleOpen,setCategory})=>{
+const FormCategory=()=>{
     const [enable,setEnable]=useState(false)
+    
     const [category,setNewCategory]=useState("")
+    
     const handleSubmit=(e)=>{
         e.preventDefault();
-        if(!actualCategories.includes(category)){
-        setCategory([...actualCategories,category])
-        handleOpen(!isOpen)
-    }else setEnable(true)
-
+        if(!categories.includes(category)){
+        setCategory([...categories,category])
+        handleOpenCategory(!stateModalCategory)
     }
-    if(!isOpen) return null;
+    else setEnable(true);
+  }
+  const {categories,stateModalCategory,handleOpenCategory,setCategory}=useContext(GlobalContext);
+    if(!stateModalCategory) return null;
     return(
         
         <section aria-labelledby="add-category-title" className="fixed z-10 inset-0 overflow-y-auto">
@@ -30,7 +34,7 @@ const FormCategory=({actualCategories,isOpen,handleOpen,setCategory})=>{
             {enable && <p>Categoría ya listada</p>}
         </div>
         <div className="flex items-center justify-between">
-          <button type="button" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={() => handleOpen(!isOpen)}>
+          <button type="button" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={() => handleOpenCategory(!stateModalCategory)}>
             Cancelar
           </button>
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
