@@ -4,8 +4,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
+      logo: {
+        'logoImg': "url('/public/logo.png')",
+      },
       backgroundImage: {
-        'codingImg':"url('/public/imgs/codeando.png')",
+        'codingImg':"url('/public/img/codeando.png')",
       }
       ,
       colors: {
