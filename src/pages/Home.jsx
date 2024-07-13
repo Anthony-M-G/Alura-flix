@@ -5,166 +5,114 @@ import Banner from "../components/Banner";
 import Form from "../components/Form";
 import MultiCardCarousel from "../components/Multicard";
 import Footer from "../components/Footer";
+import FormCategory from "../components/FormCategory";
 
 const Home = (props) => {
-    const [videos, setVideo] = useState([
-    {
-        "id": 1,
-        "title": "React Hooks",
-        "description": "Aprende a usar los hooks de React",
-        "url": "https://www.youtube.com/embed/dGcsHMXbSOA",
-        "category": "Programación"
-    },
-    {
-        "id": 2,
-        "title": "Noticias de tecnología",
-        "description": "Las últimas noticias de tecnología",
-        "url": "https://www.youtube.com/embed/3KaffTIZ5II",
-        "category": "Noticias tech"
-    },
-    {
-        "id": 3,
-        "title": "Python",
-        "description": "Aprende Python desde cero",
-        "url": "https://www.youtube.com/embed/woVJ4N9g3E8",
-        "category": "Lenguajes de programación"
-    },
-    {
-        "id": 4,
-        "title": "Ciencia",
-        "description": "Descubre los últimos avances científicos",
-        "url": "https://www.youtube.com/embed/1nCp2w2b7WQ",
-        "category": "Ciencia"
-    },
-    {
-        "id": 5,
-        "title": "React",
-        "description": "Aprende React desde cero",
-        "url": "https://www.youtube.com/embed/Ke90Tje7VS0",
-        "category": "Programación"
-    },
-    {
-        "id": 6,
-        "title": "Noticias de tecnología",
-        "description": "Las últimas noticias de tecnología",
-        "url": "https://www.youtube.com/embed/3KaffTIZ5II",
-        "category": "Noticias tech"
-    },
-    {
-        "id": 7,
-        "title": "Python",
-        "description": "Aprende Python desde cero",
-        "url": "https://www.youtube.com/embed/woVJ4N9g3E8",
-        "category": "Lenguajes de programación"
-    },
-    {
-        "id": 8,
-        "title": "Ciencia",
-        "description": "Descubre los últimos avances científicos",
-        "url": "https://www.youtube.com/embed/1nCp2w2b7WQ",
-        "category": "Ciencia"
-    },
-    {
-        "id": 9,
-        "title": "React",
-        "description": "Aprende React desde cero",
-        "url": "https://www.youtube.com/embed/Ke90Tje7VS0",
-        "category": "Programación"
-    },
-    {
-        "id": 10,
-        "title": "Noticias de tecnología",
-        "description": "Las últimas noticias de tecnología",
-        "url": "https://www.youtube.com/embed/3KaffTIZ5II",
-        "category": "Noticias tech"
-    },
-    {
-        "id": 11,
-        "title": "Python",
-        "description": "Aprende Python desde cero",
-        "url": "https://www.youtube.com/embed/woVJ4N9g3E8",
-        "category": "Lenguajes de programación"
-    },
-    {
-        "id": 12,
-        "title": "Ciencia",
-        "description": "Descubre los últimos avances científicos",
-        "url": "https://www.youtube.com/embed/1nCp2w2b7WQ",
-        "category": "Ciencia"
-    },
-    {
-        "id": 13,
-        "title": "JavaScript",
-        "description": "Fundamentos de JavaScript",
-        "url": "https://www.youtube.com/embed/fnBjhHhqb6s",
-        "category": "Lenguajes de programación"
-    },
-    {
-        "id": 14,
-        "title": "Machine Learning",
-        "description": "Introducción al Machine Learning",
-        "url": "https://www.youtube.com/embed/AyXTVOVDmaA",
-        "category": "Ciencia"
-    },
-    {
-        "id": 15,
-        "title": "Vue.js",
-        "description": "Tutorial de Vue.js",
-        "url": "https://www.youtube.com/embed/WjfpQlVem-8",
-        "category": "Programación"
-    },
-    {
-        "id": 16,
-        "title": "Noticias de tecnología",
-        "description": "Últimos avances en tecnología móvil",
-        "url": "https://www.youtube.com/embed/c90R6NF-0vI",
-        "category": "Noticias tech"
-    },
-    {
-        "id": 17,
-        "title": "Java",
-        "description": "Curso completo de Java para principiantes",
-        "url": "https://www.youtube.com/embed/eIrMbAQSU34",
-        "category": "Lenguajes de programación"
-    },
-    {
-        "id": 18,
-        "title": "Astrofísica",
-        "description": "Descubre los misterios del universo",
-        "url": "https://www.youtube.com/embed/1zzY5bSi2A0",
-        "category": "Ciencia"
-    },
-    {
-        "id": 19,
-        "title": "Angular",
-        "description": "Fundamentos de Angular",
-        "url": "https://www.youtube.com/embed/2OHbjep_WjQ",
-        "category": "Programación"
-    },
-    {
-        "id": 20,
-        "title": "Tecnología cuántica",
-        "description": "Avances en tecnología cuántica",
-        "url": "https://www.youtube.com/embed/1ngih1dAm4s",
-        "category": "Ciencia"
-    }
-]
+    const [videos, setVideo] = useState([{
+    id: 1,
+    title: "Tutorial de JavaScript",
+    description: "Un tutorial completo de JavaScript para principiantes.",
+    url: "https://www.youtube.com/embed/hdI2bqOjy3c",
+    category: "Programación"
+  },
+  {
+    id: 2,
+    title: "Introducción a React",
+    description: "Aprende los conceptos básicos de React y cómo crear tu primera aplicación.",
+    url: "https://www.youtube.com/embed/dGcsHMXbSOA",
+    category: "Desarrollo Web"
+  },
+  {
+    id: 3,
+    title: "CSS Grid Layout",
+    description: "Guía completa para entender y utilizar CSS Grid Layout en tus proyectos web.",
+    url: "https://www.youtube.com/embed/jV8B24rSN5o",
+    category: "Diseño Web"
+  },
+  {
+    id: 4,
+    title: "Node.js y Express",
+    description: "Crea una aplicación web con Node.js y Express desde cero.",
+    url: "https://www.youtube.com/embed/TlB_eWDSMt4",
+    category: "Backend"
+  },
+  {
+    id: 5,
+    title: "Desarrollo con Vue.js",
+    description: "Aprende a desarrollar aplicaciones dinámicas con Vue.js.",
+    url: "https://www.youtube.com/embed/4deVCNJq3qc",
+    category: "Frameworks JavaScript"
+  },
+  {
+    id: 6,
+    title: "Python para Principiantes",
+    description: "Un curso completo de Python para aquellos que recién comienzan.",
+    url: "https://www.youtube.com/embed/rfscVS0vtbw",
+    category: "Programación"
+  },
+  {
+    id: 7,
+    title: "Introducción a la Inteligencia Artificial",
+    description: "Una introducción a los conceptos básicos de la inteligencia artificial.",
+    url: "https://www.youtube.com/embed/2ePf9rue1Ao",
+    category: "IA"
+  },
+  {
+    id: 8,
+    title: "SQL para Principiantes",
+    description: "Aprende los fundamentos de SQL y cómo interactuar con bases de datos.",
+    url: "https://www.youtube.com/embed/7S_tz1z_5bA",
+    category: "Bases de Datos"
+  },
+  {
+    id: 9,
+    title: "Aprende Docker en 1 Hora",
+    description: "Curso rápido de Docker para desarrolladores.",
+    url: "https://www.youtube.com/embed/3c-iBn73dDE",
+    category: "DevOps"
+  },
+  {
+    id: 10,
+    title: "Introducción a Machine Learning",
+    description: "Conceptos básicos de Machine Learning y cómo aplicarlos.",
+    url: "https://www.youtube.com/embed/GwIo3gDZCVQ",
+    category: "Machine Learning"
+  },
+  {
+    id: 11,
+    title: "Creación de Aplicaciones Móviles con Flutter",
+    description: "Aprende a crear aplicaciones móviles con Flutter.",
+    url: "https://www.youtube.com/embed/1gDhl4leEzA",
+    category: "Desarrollo Móvil"
+  },
+  {
+    id: 12,
+    title: "Aprende Angular en 1 Hora",
+    description: "Curso rápido de Angular para desarrolladores.",
+    url: "https://www.youtube.com/embed/3qBXWUpoPHo",
+    category: "Frameworks JavaScript"
+  }]
 );
-    
-    const categories = ["Programación", "Noticias tech", "Lenguajes de programación", "Ciencia"];
-    const { stateModal, handleOpen } = props;
-
+    const { stateModal, handleOpen,stateModalCategory,handleOpenCategory,setOpenModal } = props;
+    const [categories,setCategory]=useState(["Programación", "Tecnología", "Noticias tech"]);
+    console.log(videos)
+   
     const deleteVideo = (id) => {
+        console.log(videos)
         const newVideos = videos.filter(video => video.id !== id);
+        console.log(newVideos)
         setVideo(newVideos);
     };
-    const number=Math.floor(Math.random() * (videos.length - 1)) + 1;
+    
+    
+    
 
     return (
         <>
             <main className="w-full bg-codingImg  text-center">
-                {stateModal && <Form isOpen={stateModal} handleOpen={handleOpen} categories={categories} setVideo={setVideo} videos={videos} />}
-                <Banner video={videos[number]} />
+                {stateModal && <Form isOpen={stateModal} handleOpen={handleOpen} categories={categories} setVideo={setVideo} videos={videos} setOpenModal={setOpenModal} />}
+                {stateModalCategory && <FormCategory isOpen={stateModalCategory} handleOpen={handleOpenCategory} actualCategories={categories} setCategory={setCategory}/>}
+                <Banner videos={videos} />
                 {categories.map((category, index) => (
                     <MultiCardCarousel key={`cat-${category}-${index}`} category={category} videos={videos} deleteVideo={deleteVideo} />
                 ))}

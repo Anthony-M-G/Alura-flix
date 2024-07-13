@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-const VideoCard=({title,description,url,deleteVideo,id})=>{
+const VideoCard=({title,url,deleteVideo,id})=>{
     return(
-      <article className="flex-none w-1/3 p-0 h-[200px] bg-white rounded-lg shadow-md" >
+      <article className="flex-none w-1/3 max-h-min p-0  bg-transparent rounded-lg shadow-md" >
        <div className="relative">
             <iframe  
                src={url}
@@ -14,15 +14,13 @@ const VideoCard=({title,description,url,deleteVideo,id})=>{
                ></iframe>
         </div>
       <div className="bg-darkGray  overflow-hidden relative rounded-b-md">
-        <header className="bg-blue-500 text-gray-900 text-sm font-bold py-2 text-center ">
+        <div className="bg-gradient-to-r from-cyan-700 to-blue-950 text-gray-300 text-sm font-bold text-center ">
           <h2>{title}</h2>
-        </header>
-        <div className="p-1 pt-1 text-center">
-          <p className="text-white">{description}</p>
         </div>
+       
         <div className="justify-evenly flex">
           {/*<img src="/public/edit.png" alt="" className="w-[30px] h-[30px]" />*/}
-           <img src="/public/imgs/delete.png" alt="" className="w-[30px] h-[30px]" onClick={()=>deleteVideo(id)}/>
+           <img src="/public/imgs/delete.png" alt="" className="w-[20px] h-[20px]" onClick={()=>deleteVideo(id)}/>
         </div>
        </div>
     </article>
