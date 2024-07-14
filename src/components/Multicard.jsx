@@ -31,7 +31,7 @@ const filteredVideos=listVideos.filter((video)=>video.category===category)
         
     <>
     <h1 className="px-2 py-1  inline-block rounded-md text-xl font-bold  text-gray-200 " >{category}</h1>
-        <section className="max-w-3xl max-h-2xl mx-auto bg-transparent p-10 my-0 rounded-xl relative flex justify-between text-center ">
+        <section className="max-w-3xl max-h-2xl mx-auto bg-opacity-50 bg-darkGray p-4  rounded-xl relative flex text-center ">
             <div className="w-full">
             <div className="flex space-x-4 ">
             {
@@ -44,7 +44,7 @@ const filteredVideos=listVideos.filter((video)=>video.category===category)
               
             }
           </div>
-          <div className="flex items-center justify-between mt-4  bottom-44">
+          <div className="mt-2">
             <button className="w-6 h-6 rounded-full bg-gradient-to-r from-gray-600 to-gray-50  relative right-4" onClick={handlePrev}>&lt;</button>
             <button className="w-6 h-6 rounded-full bg-gradient-to-r from-gray-600 to-gray-50 relative left-10" onClick={handleNext}>&gt;</button>
           </div>

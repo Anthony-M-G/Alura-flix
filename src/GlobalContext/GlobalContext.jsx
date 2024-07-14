@@ -9,7 +9,7 @@ const GlobalContextPrivider=({children})=>{
     setNewState(!stateModal);
   }
   const [stateModalCategory, handleOpenCategory]=useState(stateModal)
-    const [categories,setCategory]=useState(["Programación", "Tecnología", "Noticias tech"]);
+    const [categories,setCategory]=useState(["Programación", "Tecnología", "Noticias"]);
   
     
     return (

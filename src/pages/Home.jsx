@@ -9,91 +9,82 @@ import FormCategory from "../components/FormCategory";
 import { GlobalContext } from "../GlobalContext/GlobalContext";
 
 const Home = () => {
-    const [videos, setVideo] = useState([{
-    id: 1,
-    title: "Tutorial de JavaScript",
-    description: "Un tutorial completo de JavaScript para principiantes.",
-    url: "https://www.youtube.com/embed/hdI2bqOjy3c",
-    category: "Programación"
-  },
-  {
-    id: 2,
-    title: "Introducción a React",
-    description: "Aprende los conceptos básicos de React y cómo crear tu primera aplicación.",
-    url: "https://www.youtube.com/embed/dGcsHMXbSOA",
-    category: "Desarrollo Web"
-  },
-  {
-    id: 3,
-    title: "CSS Grid Layout",
-    description: "Guía completa para entender y utilizar CSS Grid Layout en tus proyectos web.",
-    url: "https://www.youtube.com/embed/jV8B24rSN5o",
-    category: "Diseño Web"
-  },
-  {
-    id: 4,
-    title: "Node.js y Express",
-    description: "Crea una aplicación web con Node.js y Express desde cero.",
-    url: "https://www.youtube.com/embed/TlB_eWDSMt4",
-    category: "Backend"
-  },
-  {
-    id: 5,
-    title: "Desarrollo con Vue.js",
-    description: "Aprende a desarrollar aplicaciones dinámicas con Vue.js.",
-    url: "https://www.youtube.com/embed/4deVCNJq3qc",
-    category: "Frameworks JavaScript"
-  },
-  {
-    id: 6,
-    title: "Python para Principiantes",
-    description: "Un curso completo de Python para aquellos que recién comienzan.",
-    url: "https://www.youtube.com/embed/rfscVS0vtbw",
-    category: "Programación"
-  },
-  {
-    id: 7,
-    title: "Introducción a la Inteligencia Artificial",
-    description: "Una introducción a los conceptos básicos de la inteligencia artificial.",
-    url: "https://www.youtube.com/embed/2ePf9rue1Ao",
-    category: "IA"
-  },
-  {
-    id: 8,
-    title: "SQL para Principiantes",
-    description: "Aprende los fundamentos de SQL y cómo interactuar con bases de datos.",
-    url: "https://www.youtube.com/embed/7S_tz1z_5bA",
-    category: "Bases de Datos"
-  },
-  {
-    id: 9,
-    title: "Aprende Docker en 1 Hora",
-    description: "Curso rápido de Docker para desarrolladores.",
-    url: "https://www.youtube.com/embed/3c-iBn73dDE",
-    category: "DevOps"
-  },
-  {
-    id: 10,
-    title: "Introducción a Machine Learning",
-    description: "Conceptos básicos de Machine Learning y cómo aplicarlos.",
-    url: "https://www.youtube.com/embed/GwIo3gDZCVQ",
-    category: "Machine Learning"
-  },
-  {
-    id: 11,
-    title: "Creación de Aplicaciones Móviles con Flutter",
-    description: "Aprende a crear aplicaciones móviles con Flutter.",
-    url: "https://www.youtube.com/embed/1gDhl4leEzA",
-    category: "Desarrollo Móvil"
-  },
-  {
-    id: 12,
-    title: "Aprende Angular en 1 Hora",
-    description: "Curso rápido de Angular para desarrolladores.",
-    url: "https://www.youtube.com/embed/3qBXWUpoPHo",
-    category: "Frameworks JavaScript"
-  }]
-);
+    const [videos, setVideo] = useState(
+[
+    {
+        id: 1,
+        title: "React Tutorial",
+        url: "https://www.youtube.com/embed/4UZrsTqkcW4",
+        category: "Programación",
+    },
+    {
+        id: 2,
+        title: "Angular Tutorial",
+        url: "https://www.youtube.com/embed/3mK5v9l3Dec",
+        category: "Programación",
+    },
+    {
+        id: 3,
+        title: "Vue Tutorial",
+        url: "https://www.youtube.com/embed/Wy9q22isx3U",
+        category: "Programación",
+    },
+    {
+        id: 4,
+        title: "Svelte Tutorial",
+        url: "https://www.youtube.com/embed/uK2RnIzrQ0M",
+        category: "Programación",
+    },
+    {
+        id: 5,
+        title: "Tech News Today",
+        url: "https://www.youtube.com/embed/KnXGxAYI-oo",
+        category: "Noticias",
+    },
+    {
+        id: 6,
+        title: "Daily Tech News",
+        url: "https://www.youtube.com/embed/2yyxo9oz8Zk",
+        category: "Noticias",
+    },
+    {
+        id: 7,
+        title: "Breaking Tech News",
+        url: "https://www.youtube.com/embed/tdzXI4f4LMI",
+        category: "Noticias",
+    },
+    {
+        id: 8,
+        title: "Latest Tech Updates",
+        url: "https://www.youtube.com/embed/2vj37z0Z-vE",
+        category: "Noticias",
+    },
+    {
+        id: 9,
+        title: "The Future of AI",
+        url: "https://www.youtube.com/embed/2w8eRSDP3cI",
+        category: "Tecnología",
+    },
+    {
+        id: 10,
+        title: "Quantum Computing Explained",
+        url: "https://www.youtube.com/embed/6XIdaXR0-mE",
+        category: "Tecnología",
+    },
+    {
+        id: 11,
+        title: "Blockchain Basics",
+        url: "https://www.youtube.com/embed/hYip_Vuv8J0",
+        category: "Tecnología",
+    },
+    {
+        id: 12,
+        title: "5G Technology",
+        url: "https://www.youtube.com/embed/kH78eIziFOY",
+        category: "Tecnología",
+    }
+]);
+  
     const { categories,stateModal,stateModalCategory} = useContext(GlobalContext);
     
     
