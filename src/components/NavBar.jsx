@@ -14,7 +14,7 @@ const NavBar=()=> {
   } 
   return (
     
-      <nav className="flex w-full items-center justify-between p-[20px] lg:px-8 top-0 bg-darkGray border-b-4 border-cyan-600" aria-label="Global" >
+      <nav className="flex w-full items-center justify-between p-[20px] lg:px-8 top-0 bg-black border-b-4 border-cyan-600" aria-label="Global" >
         <img src={logo} alt="logo" className="h-10 w-20" />
         <div className="flex flex-row w-full justify-end">
           <a to="/" className="-mx-0.2 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:bg-gray-600 ">Home</a>

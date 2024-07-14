@@ -31,9 +31,9 @@ const filteredVideos=listVideos.filter((video)=>video.category===category)
         
     <>
     <h1 className="px-2 py-1  inline-block rounded-md text-xl font-bold  text-gray-200 " >{category}</h1>
-        <section className="max-w-3xl max-h-2xl mx-auto bg-opacity-50 bg-darkGray p-4  rounded-xl relative flex text-center ">
+        <section className="w-full h-fit mx-auto bg-transparent bg-darkGray p-6  rounded-xl relative flex text-center ">
             <div className="w-full">
-            <div className="flex space-x-4 ">
+            <div className="flex justify-evenly">
             {
             filteredVideos.length==0 ? <EmptyVideos/>
             :
@@ -44,9 +44,9 @@ const filteredVideos=listVideos.filter((video)=>video.category===category)
               
             }
           </div>
-          <div className="mt-2">
-            <button className="w-6 h-6 rounded-full bg-gradient-to-r from-gray-600 to-gray-50  relative right-4" onClick={handlePrev}>&lt;</button>
-            <button className="w-6 h-6 rounded-full bg-gradient-to-r from-gray-600 to-gray-50 relative left-10" onClick={handleNext}>&gt;</button>
+          <div className="mt-2 space-x-1 ">
+            <button className="w-6 h-6 rounded-full bg-gradient-to-r from-gray-600 to-gray-50 " onClick={handlePrev}>&lt;</button>
+            <button className="w-6 h-6 rounded-full bg-gradient-to-r from-gray-600 to-gray-50 " onClick={handleNext}>&gt;</button>
           </div>
        
      

@@ -99,7 +99,7 @@ const Home = () => {
 
     return (
         <>
-            <main className="w-full bg-codingImg  text-center">
+            <main className="w-full bg-black   text-center">
                 {stateModal && <Form videos={videos} setVideo={setVideo}/>}
                 {stateModalCategory && <FormCategory/>}
                 <Banner videos={videos} />

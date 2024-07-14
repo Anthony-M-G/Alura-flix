@@ -2,7 +2,7 @@
 
 const VideoCard=({title,url,deleteVideo,id})=>{
     return(
-      <article className="flex-none w-1/3 max-h-min p-0  bg-transparent rounded-lg shadow-md" >
+      <article className="flex-none w-1/4 max-h-min p-0  bg-transparent rounded-lg shadow-md" >
        <div className="relative">
             <iframe  
                src={url}
